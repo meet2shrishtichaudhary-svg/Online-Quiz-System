@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Quiz System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+   <header class="topbar">
+       <h1>QuizMaster</h1>
+       <p>Online Quiz & Exam Systez
+       </p>
+   </header>
+
+   <main class="dashboard">
+
+       <section class="welcome">
+          <h2>Welcom to QuizMaster!</h2>
+          <p>Choose a category and test your knowledge.</p>
+          <button id="startQuizBtn">Start Quiz</button>
+
+       </section>
+
+       <section class="quiz-section" id="quizSection">
+
+          <h2>Practice Quiz</h2>
+
+          <div class="timer-box">
+            <span>Time Remaining</span>
+            <p id="timer">05:00</p>
+          </div>
+
+          <p id="questionCounter">Question 1 of 5</p>
+
+         <h3 id="questionText">
+           Question will appear here
+         </h3>
+
+         <div id="optionsContainer"></div>
+
+         <button id="nextButton" disabled>
+         Next Question
+         </button>
+
+      </section>
+
+       <section class="categories">
+          <h2>Quiz Categories</h2>
+
+          <div class="category-list">
+            
+         <article class="category-card" data-category="web">
+            <h3>Web Development</h3>
+            <p>HTML, CSS and JavaScript</p>
+             <button class="start-category-btn">Start Quiz</button>
+         </article>
+ 
+            <article class="category-card" data-category="ai">
+                <h3>AI & ML</h3>
+                <p>Artificial Intelligence and Machine Learning</p>
+                <button class="start-category-btn">Start Quiz</button>
+            </article>
+
+            <article class="category-card" data-category="gk">
+                <h3>General knowledge</h3>
+                <p>Test your general awareness</p>
+                <button class="start-category-btn">Start Quiz</button>
+            </article>
+
+            <article class="category-card" data-category="cs">
+                <h3>Computer Science</h3>
+                <p>Programming and computer fundamentals</p>
+                <button class="start-category-btn">Start Quiz</button>
+            </article>
+
+          </div>
+       </section>
+
+       <section class="history">
+        <h2>Recent Quiz Results</h2>
+        <div id="historyList">
+            <p>No quiz attempts yet.</p>
+        </div>
+       </section>
+
+       <section class="result-section" id="resultSection" style="display: none;">
+           <h2>Quiz Result</h2>
+
+           <p id="finalScore"></p>
+           <p id="finalPercentage"></p>
+           <p id="resultMessage"></p>
+
+           <button id="restartButton">Try Again</button>
+        </section>
+
+   </main>
+
+   <script src="script.js"></script>
+</body>
+</html>
